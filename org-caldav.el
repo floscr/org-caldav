@@ -483,7 +483,7 @@ OAuth2 if necessary."
 Also sets `org-caldav-empty-calendar' if calendar is empty."
   (org-caldav-debug-print 1 (format "Check connection for %s."
 				    (org-caldav-events-url)))
-  (org-caldav-check-dav (org-caldav-events-url))
+  ;; (org-caldav-check-dav (org-caldav-events-url))
   (let* ((output (org-caldav-url-dav-get-properties
 		  (org-caldav-events-url) "resourcetype"))
 	 (status (plist-get (cdar output) 'DAV:status)))
